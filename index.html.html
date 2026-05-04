@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faizan Ali — Amazon Growth Operator</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;0,700;1,300&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060A0F;--bg2:#0B1017;--bg3:#101820;--bg4:#151F28;--border:rgba(255,255,255,0.06);--border2:rgba(255,255,255,0.11);--accent:#00D68F;--blue:#1E90FF;--amber:#F5A623;--text:#D8E4EF;--muted:#5A7088;--dim:#2A3A4A;--mono:'IBM Plex Mono',monospace;--sans:'IBM Plex Sans',sans-serif;--display:'Bebas Neue',sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.4}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:18px 52px;background:rgba(6,10,15,.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.12em;text-decoration:none}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{font-family:var(--mono);font-size:10px;color:var(--muted);text-decoration:none;letter-spacing:.12em;text-transform:uppercase;transition:color .2s}
+.nav-links a:hover{color:var(--accent)}
+.nav-acts{display:flex;gap:10px;align-items:center}
+.nav-cv{font-family:var(--mono);font-size:10px;color:var(--accent);border:1px solid var(--accent);padding:7px 16px;text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:all .2s}
+.nav-cv:hover{background:var(--accent);color:var(--bg)}
+.nav-cta{font-family:var(--mono);font-size:10px;color:var(--bg);background:var(--accent);padding:8px 18px;text-decoration:none;letter-spacing:.1em;text-transform:uppercase;transition:opacity .2s}
+.nav-cta:hover{opacity:.85}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;padding:110px 52px 80px;gap:60px;align-items:center;position:relative;overflow:hidden}
+.hero-glow{position:absolute;top:-100px;right:-150px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,214,143,.07) 0%,transparent 65%);pointer-events:none}
+.grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:52px 52px;pointer-events:none}
+.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow-line{width:28px;height:1px;background:var(--accent)}
+.eyebrow span{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.18em;text-transform:uppercase}
+.hero h1{font-family:var(--display);font-size:clamp(58px,7vw,96px);line-height:.95;letter-spacing:.02em;margin-bottom:8px}
+.hero h1 .l2{color:var(--accent)}
+.hero h1 .l3{color:var(--muted)}
+.hero-sub{font-size:15px;color:var(--muted);max-width:460px;line-height:1.85;margin:24px 0 36px;font-weight:300}
+.hero-acts{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px 24px;text-decoration:none;transition:all .2s}
+.btn-g{background:var(--accent);color:var(--bg)}
+.btn-g:hover{background:#00ffb0;transform:translateY(-1px)}
+.btn-o{border:1px solid var(--border2);color:var(--text)}
+.btn-o:hover{border-color:var(--accent);color:var(--accent)}
+.btn-b{border:1px solid var(--blue);color:var(--blue)}
+.btn-b:hover{background:var(--blue);color:var(--bg)}
+.hero-panel{background:var(--bg2);border:1px solid var(--border2);animation:lev 7s ease-in-out infinite}
+@keyframes lev{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.p-bar{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:1px solid var(--border)}
+.p-dots{display:flex;gap:6px}
+.pd{width:8px;height:8px;border-radius:50%}
+.pd-r{background:#FF5F56}.pd-y{background:#FFBD2E}.pd-g{background:var(--accent)}
+.p-title{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.12em}
+.live{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:9px;color:var(--accent)}
+.live-d{width:5px;height:5px;border-radius:50%;background:var(--accent);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.kpi-g{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-bottom:1px solid var(--border)}
+.kpi{background:var(--bg3);padding:18px 16px;position:relative;overflow:hidden}
+.kpi::after{content:'';position:absolute;top:0;left:0;width:2px;height:100%}
+.k-g::after{background:var(--accent)}.k-b::after{background:var(--blue)}.k-a::after{background:var(--amber)}.k-p::after{background:#A78BFA}
+.kpi-l{font-family:var(--mono);font-size:8px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px}
+.kpi-n{font-family:var(--display);font-size:30px;line-height:1;margin-bottom:3px}
+.k-g .kpi-n{color:var(--accent)}.k-b .kpi-n{color:var(--blue)}.k-a .kpi-n{color:var(--amber)}.k-p .kpi-n{color:#A78BFA}
+.kpi-d{font-family:var(--mono);font-size:8px;color:var(--muted)}
+.spark{padding:14px 18px 18px}
+.spark-l{font-family:var(--mono);font-size:8px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+.bars{display:flex;align-items:flex-end;gap:6px;height:60px}
+.bc{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end}
+.bf{width:100%;border-radius:1px 1px 0 0}
+.byr{font-family:var(--mono);font-size:7px;color:var(--dim)}
+.ticker{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:14px 0;overflow:hidden}
+.t-track{display:flex;width:max-content;animation:run 35s linear infinite}
+@keyframes run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ti{display:flex;align-items:center;gap:10px;padding:0 36px;white-space:nowrap;border-right:1px solid var(--border)}
+.tn{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--accent)}
+.tl{font-family:var(--sans);font-size:11px;color:var(--muted)}
+.ts{width:3px;height:3px;background:var(--dim);border-radius:50%}
+section{padding:96px 52px;position:relative}
+.se{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.se span{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.18em;text-transform:uppercase}
+.se-line{width:22px;height:1px;background:var(--accent)}
+.st{font-family:var(--display);font-size:clamp(40px,5vw,68px);line-height:.97;letter-spacing:.02em;margin-bottom:14px}
+.ss{font-size:15px;color:var(--muted);max-width:480px;line-height:1.85}
+.rg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:56px}
+.rc{background:var(--bg2);padding:36px 28px;position:relative;overflow:hidden;transition:background .3s}
+.rc:hover{background:var(--bg3)}
+.rc::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--accent);transition:width .4s}
+.rc:hover::after{width:100%}
+.rn{font-family:var(--display);font-size:clamp(44px,4vw,58px);line-height:1;margin-bottom:6px;color:var(--accent)}
+.rl{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.rd{font-size:13px;color:var(--muted);line-height:1.75}
+.csw{background:var(--bg2);border:1px solid var(--border2);padding:56px;margin-top:56px;position:relative}
+.cst{position:absolute;top:24px;right:32px;font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:.2em;text-transform:uppercase}
+.csb{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
+.csh{font-family:var(--display);font-size:clamp(32px,4vw,52px);line-height:1;margin-bottom:20px}
+.csp{font-size:14px;color:var(--muted);max-width:580px;line-height:1.85;margin-bottom:36px}
+.cstl{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:36px}
+.csy{background:var(--bg3);padding:22px;text-align:center}
+.csyl{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.1em;margin-bottom:6px}
+.csyr{font-family:var(--display);font-size:32px;color:var(--accent);margin-bottom:4px}
+.csys{font-family:var(--mono);font-size:9px;color:var(--dim)}
+.csm{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.csmm{background:var(--bg3);border:1px solid var(--border);padding:18px;text-align:center}
+.csmv{font-family:var(--display);font-size:26px;color:var(--text);margin-bottom:4px}
+.csml{font-family:var(--mono);font-size:8px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.og{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
+.oc{border:1px solid var(--border);padding:32px 24px;position:relative;transition:border-color .3s}
+.oc:hover{border-color:var(--accent)}
+.on{font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:.1em;margin-bottom:20px}
+.oi{font-size:24px;margin-bottom:14px;display:block}
+.ott{font-family:var(--display);font-size:26px;margin-bottom:10px;line-height:1.1}
+.od{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:20px}
+.otags{display:flex;flex-wrap:wrap;gap:6px}
+.otag{font-family:var(--mono);font-size:9px;color:var(--accent);border:1px solid rgba(0,214,143,.2);padding:4px 10px;letter-spacing:.08em}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:52px}
+.ps{background:var(--bg2);padding:32px 24px;transition:background .3s}
+.ps:hover{background:var(--bg3)}
+.pn{font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:.1em;margin-bottom:14px}
+.pb{width:20px;height:2px;background:var(--accent);margin-bottom:18px}
+.pt{font-family:var(--display);font-size:22px;margin-bottom:10px;line-height:1.1}
+.pd2{font-size:12px;color:var(--muted);line-height:1.75}
+.certg{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:52px}
+.certc{background:var(--bg3);border:1px solid var(--border);padding:24px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:var(--text);transition:all .3s;position:relative}
+.certc:hover{border-color:var(--accent);background:var(--bg4)}
+.certc::after{content:'↗';position:absolute;top:16px;right:16px;font-family:var(--mono);font-size:12px;color:var(--muted);transition:color .2s}
+.certc:hover::after{color:var(--accent)}
+.no-arrow::after{content:'' !important}
+.ci{font-family:var(--mono);font-size:8px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase}
+.cn{font-family:var(--sans);font-size:14px;font-weight:500;line-height:1.4}
+.cd{font-family:var(--mono);font-size:8px;color:var(--dim)}
+.cbadge{display:inline-flex;align-items:center;gap:5px;margin-top:4px;font-family:var(--mono);font-size:8px;color:var(--accent);border:1px solid rgba(0,214,143,.3);padding:4px 10px;width:fit-content}
+.cdot{width:4px;height:4px;border-radius:50%;background:var(--accent)}
+.skg{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:52px}
+.skc{border:1px solid var(--border);padding:28px;transition:border-color .3s}
+.skc:hover{border-color:var(--border2)}
+.skh{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.ski{width:36px;height:36px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.skt{font-family:var(--display);font-size:22px}
+.skrows{display:flex;flex-direction:column;gap:10px}
+.skr{display:flex;flex-direction:column;gap:5px}
+.skm{display:flex;justify-content:space-between}
+.skn{font-size:12px;color:var(--muted)}
+.skp{font-family:var(--mono);font-size:10px;color:var(--dim)}
+.skt2{height:2px;background:var(--bg3);border-radius:1px;overflow:hidden}
+.skf{height:100%;border-radius:1px;background:linear-gradient(90deg,var(--accent),var(--blue));transform-origin:left;transform:scaleX(0);transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
+.skf.anim{transform:scaleX(1)}
+.ttags{display:flex;flex-wrap:wrap;gap:8px}
+.ttag{font-family:var(--mono);font-size:10px;color:var(--muted);border:1px solid var(--border);padding:6px 14px;letter-spacing:.06em;background:var(--bg2);transition:all .2s;cursor:default}
+.ttag:hover{border-color:var(--accent);color:var(--accent)}
+.tg{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:52px}
+.tc{background:var(--bg3);border:1px solid var(--border);padding:32px}
+.tm{font-family:var(--display);font-size:56px;line-height:.5;color:var(--accent);opacity:.25;margin-bottom:18px;display:block}
+.tt{font-size:14px;color:var(--muted);line-height:1.85;font-style:italic;margin-bottom:24px}
+.ta{display:flex;align-items:center;gap:12px}
+.tav{width:36px;height:36px;background:var(--bg2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--accent);flex-shrink:0}
+.tan{font-family:var(--sans);font-size:13px;font-weight:500;margin-bottom:2px}
+.tar{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.08em}
+.avail{margin:0 52px;background:var(--bg3);border:1px solid var(--accent);padding:28px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden}
+.avail::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,214,143,.05) 0%,transparent 55%);pointer-events:none}
+.avail-l{display:flex;align-items:center;gap:20px}
+.avail-s{display:flex;align-items:center;gap:7px}
+.avail-d{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:blink 2s infinite}
+.avail-st{font-family:var(--mono);font-size:10px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase}
+.avail-tx{font-size:14px;color:var(--muted)}
+.avail-tx strong{color:var(--text)}
+.cog{display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-top:56px;align-items:start}
+.ctit{font-family:var(--display);font-size:28px;margin-bottom:12px;line-height:1.2}
+.cbod{font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:32px}
+.cls{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.cl{display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--bg2);border:1px solid var(--border);text-decoration:none;color:var(--text);font-size:13px;transition:all .2s}
+.cl:hover{border-color:var(--accent);color:var(--accent)}
+.cli{font-size:14px;width:20px;text-align:center;flex-shrink:0}
+.cll{font-family:var(--mono);font-size:9px;color:var(--muted);margin-left:auto;letter-spacing:.08em;text-transform:uppercase}
+.cl:hover .cll{color:var(--accent)}
+.cacts{display:flex;gap:10px;flex-wrap:wrap}
+.cf{display:flex;flex-direction:column;gap:12px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fg{display:flex;flex-direction:column;gap:5px}
+.fl{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
+.fi,.fsel,.fa{background:var(--bg2);border:1px solid var(--border);color:var(--text);font-family:var(--sans);font-size:13px;padding:11px 14px;outline:none;transition:border-color .2s;appearance:none;width:100%}
+.fi:focus,.fsel:focus,.fa:focus{border-color:var(--accent)}
+.fi::placeholder,.fa::placeholder{color:var(--dim)}
+.fa{resize:vertical;min-height:110px}
+.fsub{background:var(--accent);color:var(--bg);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;border:none;cursor:pointer;transition:all .2s;align-self:flex-start}
+.fsub:hover{background:#00ffb0;transform:translateY(-1px)}
+footer{border-top:1px solid var(--border);padding:28px 52px;display:flex;align-items:center;justify-content:space-between}
+.fcopy{font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:.06em}
+.flinks{display:flex;gap:24px}
+.flinks a{font-family:var(--mono);font-size:10px;color:var(--muted);text-decoration:none;letter-spacing:.06em;transition:color .2s}
+.flinks a:hover{color:var(--accent)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
+.reveal.on{opacity:1;transform:translateY(0)}
+@media(max-width:960px){nav{padding:14px 20px}.nav-links{display:none}.hero{grid-template-columns:1fr;padding:100px 20px 60px}.hero-panel{display:none}section{padding:70px 20px}.rg,.certg{grid-template-columns:1fr}.csm{grid-template-columns:repeat(2,1fr)}.cstl{grid-template-columns:1fr}.skg,.tg,.og{grid-template-columns:1fr}.pg{grid-template-columns:repeat(2,1fr)}.cog{grid-template-columns:1fr;gap:40px}.avail{flex-direction:column;align-items:flex-start;margin:0 20px}footer{flex-direction:column;gap:14px;padding:20px;text-align:center}.fr{grid-template-columns:1fr}.csw{padding:28px 20px}.nav-cv{display:none}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#" class="nav-logo">FA_OPERATOR.PPC</a>
+  <ul class="nav-links">
+    <li><a href="#results">Results</a></li>
+    <li><a href="#case">Case Study</a></li>
+    <li><a href="#open">Open To</a></li>
+    <li><a href="#certs">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-acts">
+    <a href="Faizan_Ali_CV.pdf" download class="nav-cv">↓ CV</a>
+    <a href="https://calendly.com/faizan-ali2394/30min" target="_blank" class="nav-cta">Book a Call →</a>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="grid-lines"></div>
+  <div class="hero-glow"></div>
+  <div class="reveal">
+    <div class="eyebrow"><div class="eyebrow-line"></div><span>Amazon PPC &amp; Growth Operator · Lahore, PK</span></div>
+    <h1><span>I BUILD</span><br><span class="l2">MACHINES</span><br><span class="l3">THAT SCALE.</span></h1>
+    <p class="hero-sub">Took one brand from $132K to $1.06M in 2 years — solo. Full PPC architecture, listing SEO, P&amp;L, operations. No team. No handoffs. Just execution.</p>
+    <div class="hero-acts">
+      <a href="#case" class="btn btn-g">See the numbers →</a>
+      <a href="https://calendly.com/faizan-ali2394/30min" target="_blank" class="btn btn-b">📅 Book 30-min call</a>
+      <a href="Faizan_Ali_CV.pdf" download class="btn btn-o">↓ Download CV</a>
+    </div>
+  </div>
+  <div class="hero-panel reveal">
+    <div class="p-bar">
+      <div class="p-dots"><div class="pd pd-r"></div><div class="pd pd-y"></div><div class="pd pd-g"></div></div>
+      <span class="p-title">performance_dashboard.sellerboard</span>
+      <div class="live"><div class="live-d"></div>VERIFIED</div>
+    </div>
+    <div class="kpi-g">
+      <div class="kpi k-g"><div class="kpi-l">Peak Revenue</div><div class="kpi-n">$1.06M</div><div class="kpi-d">↑ 700% from baseline</div></div>
+      <div class="kpi k-b"><div class="kpi-l">Ad Spend Y3</div><div class="kpi-n">$138K</div><div class="kpi-d">Annual managed</div></div>
+      <div class="kpi k-a"><div class="kpi-l">Net Profit Y3</div><div class="kpi-n">$139K</div><div class="kpi-d">↑ from $33K Y1</div></div>
+      <div class="kpi k-p"><div class="kpi-l">Blended ACoS</div><div class="kpi-n">&lt;22%</div><div class="kpi-d">Held all 3 years</div></div>
+    </div>
+    <div class="spark">
+      <div class="spark-l">Revenue arc — 3yr</div>
+      <div class="bars">
+        <div class="bc"><div class="bf" style="height:13%;background:rgba(0,214,143,.3)"></div><div class="byr">Y1</div></div>
+        <div class="bc"><div class="bf" style="height:52%;background:rgba(0,214,143,.6)"></div><div class="byr">Y2</div></div>
+        <div class="bc"><div class="bf" style="height:100%;background:var(--accent)"></div><div class="byr">Y3</div></div>
+        <div class="bc" style="margin-left:8px"><div class="bf" style="height:9%;background:rgba(30,144,255,.6)"></div><div class="byr" style="color:var(--blue)">ACoS</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="t-track">
+    <div class="ti"><span class="tn">$1,061,647</span><div class="ts"></div><span class="tl">Peak Annual Revenue</span></div>
+    <div class="ti"><span class="tn">700%</span><div class="ts"></div><span class="tl">Revenue Growth</span></div>
+    <div class="ti"><span class="tn">$10M+</span><div class="ts"></div><span class="tl">Total Managed Sales</span></div>
+    <div class="ti"><span class="tn">&lt;22%</span><div class="ts"></div><span class="tl">Blended ACoS</span></div>
+    <div class="ti"><span class="tn">20+</span><div class="ts"></div><span class="tl">Brands Scaled</span></div>
+    <div class="ti"><span class="tn">5+</span><div class="ts"></div><span class="tl">Years Operating</span></div>
+    <div class="ti"><span class="tn">$139K</span><div class="ts"></div><span class="tl">Net Profit Y3</span></div>
+    <div class="ti"><span class="tn">60%→20%</span><div class="ts"></div><span class="tl">ACoS Cut 90 Days</span></div>
+    <div class="ti"><span class="tn">$132K→$1M</span><div class="ts"></div><span class="tl">Single Brand Arc</span></div>
+    <div class="ti"><span class="tn">$1,061,647</span><div class="ts"></div><span class="tl">Peak Annual Revenue</span></div>
+    <div class="ti"><span class="tn">700%</span><div class="ts"></div><span class="tl">Revenue Growth</span></div>
+    <div class="ti"><span class="tn">$10M+</span><div class="ts"></div><span class="tl">Total Managed Sales</span></div>
+    <div class="ti"><span class="tn">&lt;22%</span><div class="ts"></div><span class="tl">Blended ACoS</span></div>
+    <div class="ti"><span class="tn">20+</span><div class="ts"></div><span class="tl">Brands Scaled</span></div>
+    <div class="ti"><span class="tn">5+</span><div class="ts"></div><span class="tl">Years Operating</span></div>
+    <div class="ti"><span class="tn">$139K</span><div class="ts"></div><span class="tl">Net Profit Y3</span></div>
+    <div class="ti"><span class="tn">60%→20%</span><div class="ts"></div><span class="tl">ACoS Cut 90 Days</span></div>
+    <div class="ti"><span class="tn">$132K→$1M</span><div class="ts"></div><span class="tl">Single Brand Arc</span></div>
+  </div>
+</div>
+
+<section id="results">
+  <div class="se reveal"><div class="se-line"></div><span>Verified Performance</span></div>
+  <h2 class="st reveal">NUMBERS<br>DON'T LIE.</h2>
+  <p class="ss reveal">Every figure below verified via Sellerboard. Real ad spend, real revenue, real profit.</p>
+  <div class="rg">
+    <div class="rc reveal"><div class="rn">700%</div><div class="rl">Revenue Growth</div><div class="rd">$132,848 → $1,061,647 in 2 years. Sole operator. Full P&amp;L ownership throughout.</div></div>
+    <div class="rc reveal"><div class="rn">&lt;22%</div><div class="rl">Blended ACoS</div><div class="rd">Held below 22% while scaling ad spend from $8K to $138K annually.</div></div>
+    <div class="rc reveal"><div class="rn">4.2×</div><div class="rl">Net Profit Growth</div><div class="rd">$33,076 → $139,312 net profit. Intentional margin improvement, not a byproduct.</div></div>
+    <div class="rc reveal"><div class="rn">90d</div><div class="rl">ACoS Turnaround</div><div class="rd">Supplement brand: 60% → 20% ACoS in 90 days via full campaign restructure.</div></div>
+    <div class="rc reveal"><div class="rn">5×</div><div class="rl">Q4 Revenue Jump</div><div class="rd">Indoor slippers brand: $20K → $100K in one Q4. ACoS held at 30% through peak.</div></div>
+    <div class="rc reveal"><div class="rn">$10M+</div><div class="rl">Total Managed Sales</div><div class="rd">Cumulative across 20+ brands — home goods, supplements, apparel, memory foam.</div></div>
+  </div>
+</section>
+
+<section id="case" style="background:var(--bg2)">
+  <div class="se reveal"><div class="se-line"></div><span>Deep Dive</span></div>
+  <h2 class="st reveal">THE $1M<br>BRAND STORY.</h2>
+  <p class="ss reveal">Two years. One operator. The full picture — including the hard months.</p>
+  <div class="csw reveal">
+    <div class="cst">CASE STUDY · 01</div>
+    <div class="csb">US Memory Foam Brand · Oct 2023 – Dec 2025 · Remote</div>
+    <h3 class="csh">$132K → $1.06M —<br>and what it actually took.</h3>
+    <p class="csp">I ran this brand completely alone. PPC, inventory, supplier sourcing, P&amp;L, listings, operations, SOPs. Some months were incredible. Some were brutal — Q4 quality issues, refund spikes that wiped margin overnight, ad spend scaling faster than the brand could breathe. The losses were real. But so were the results.</p>
+    <div class="cstl">
+      <div class="csy"><div class="csyl">YEAR 1 · 2023</div><div class="csyr">$132,848</div><div class="csys">Baseline · $8K ad spend · $33K profit</div></div>
+      <div class="csy"><div class="csyl">YEAR 2 · 2024</div><div class="csyr">$546,435</div><div class="csys">+311% · $91K ad spend · $73K profit</div></div>
+      <div class="csy"><div class="csyl">YEAR 3 · 2025</div><div class="csyr">$1,061,647</div><div class="csys">+94% · $138K ad spend · $139K profit</div></div>
+    </div>
+    <div class="csm">
+      <div class="csmm"><div class="csmv">$33K→$139K</div><div class="csml">Net Profit Arc</div></div>
+      <div class="csmm"><div class="csmv">&lt;22%</div><div class="csml">Blended ACoS</div></div>
+      <div class="csmm"><div class="csmv">7 SKUs</div><div class="csml">Launched &amp; Ranked</div></div>
+      <div class="csmm"><div class="csmv">Verified</div><div class="csml">Via Sellerboard</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="open" style="background:var(--bg3)">
+  <div class="se reveal"><div class="se-line"></div><span>Availability</span></div>
+  <h2 class="st reveal">WHAT I'M<br>OPEN TO.</h2>
+  <p class="ss reveal">Three ways to work together. Pick the one that fits your situation.</p>
+  <div class="og">
+    <div class="oc reveal"><div class="on">01 / FULL-TIME ROLE</div><span class="oi">💼</span><div class="ott">SENIOR PPC LEAD</div><div class="od">Remote, full-time. Agency or in-house. EST-compatible. Immediate start. Ideal for teams managing $50K+/month in ad spend.</div><div class="otags"><span class="otag">Remote</span><span class="otag">Full-time</span><span class="otag">Immediate</span><span class="otag">EST Hours</span></div></div>
+    <div class="oc reveal"><div class="on">02 / RETAINER</div><span class="oi">📈</span><div class="ott">FRACTIONAL OPERATOR</div><div class="od">Embed with your brand monthly. Own PPC, SEO, and growth strategy. For brands doing $30K–$300K/month who need operator-level thinking.</div><div class="otags"><span class="otag">Monthly Retainer</span><span class="otag">$30K–$300K Brands</span><span class="otag">Full Ownership</span></div></div>
+    <div class="oc reveal"><div class="on">03 / PROJECT</div><span class="oi">🔍</span><div class="ott">PPC AUDIT + STRATEGY</div><div class="od">One-time deep-dive audit. Full diagnosis, restructure plan, and 90-day roadmap. Delivered in 7 days. No ongoing commitment.</div><div class="otags"><span class="otag">One-time</span><span class="otag">7-day delivery</span><span class="otag">Any budget</span></div></div>
+  </div>
+</section>
+
+<section id="process" style="background:var(--bg)">
+  <div class="se reveal"><div class="se-line"></div><span>How I Operate</span></div>
+  <h2 class="st reveal">THE OPERATOR<br>FRAMEWORK.</h2>
+  <p class="ss reveal">Four pillars. Every brand gets the same systematic approach.</p>
+  <div class="pg">
+    <div class="ps reveal"><div class="pn">01 / AUDIT</div><div class="pb"></div><div class="pt">FULL ACCOUNT DIAGNOSIS</div><div class="pd2">PPC audit, P&amp;L review, listing analysis, keyword gap map. Find the holes before fixing anything. 5–7 days.</div></div>
+    <div class="ps reveal"><div class="pn">02 / BUILD</div><div class="pb"></div><div class="pt">ARCHITECTURE REBUILD</div><div class="pd2">Campaign rebuild from scratch. Match type isolation, ASIN-level separation, bid strategy by funnel stage.</div></div>
+    <div class="ps reveal"><div class="pn">03 / OPTIMIZE</div><div class="pb"></div><div class="pt">WEEKLY LOOP</div><div class="pd2">Monday harvest. Wednesday bids. Friday reallocation. Every week, every account. Compounding improvements.</div></div>
+    <div class="ps reveal"><div class="pn">04 / SCALE</div><div class="pb"></div><div class="pt">DATA-DRIVEN GROWTH</div><div class="pd2">TACoS tracking, Sellerboard P&amp;L, full reporting. Scale what works. Kill what doesn't. No guesswork.</div></div>
+  </div>
+</section>
+
+<section id="certs" style="background:var(--bg2)">
+  <div class="se reveal"><div class="se-line"></div><span>Verified Credentials</span></div>
+  <h2 class="st reveal">CERTIFICATIONS.</h2>
+  <p class="ss reveal">Click any card to verify the credential directly.</p>
+  <div class="certg">
+    <a href="https://advertising.amazon.com/academy/student/path/61496/amazon-sponsored-ads-advanced-certification" target="_blank" class="certc reveal"><div class="ci">Amazon Ads</div><div class="cn">Amazon Sponsored Ads Advanced Certification</div><div class="cd">Credential ID: 3686082</div><div class="cbadge"><div class="cdot"></div>VERIFY CREDENTIAL</div></a>
+    <a href="https://www.coursera.org/account/accomplishments/records/5VNSKH1P6UTG" target="_blank" class="certc reveal"><div class="ci">Google / Coursera</div><div class="cn">Google Data Analytics Professional Certificate</div><div class="cd">Record ID: 5VNSKH1P6UTG</div><div class="cbadge"><div class="cdot"></div>VERIFY CREDENTIAL</div></a>
+    <a href="https://www.coursera.org/account/accomplishments/records/OC603VDB0BCQ" target="_blank" class="certc reveal"><div class="ci">Google / Coursera</div><div class="cn">Google Project Management Professional Certificate</div><div class="cd">Record ID: OC603VDB0BCQ</div><div class="cbadge"><div class="cdot"></div>VERIFY CREDENTIAL</div></a>
+    <a href="https://advertising.amazon.com/certifications" target="_blank" class="certc reveal"><div class="ci">Amazon Ads</div><div class="cn">Amazon Certified Advertiser</div><div class="cd">Amazon Advertising Certification</div><div class="cbadge"><div class="cdot"></div>VIEW CERTIFICATION</div></a>
+    <div class="certc no-arrow reveal" style="cursor:default"><div class="ci">Extreme Commerce</div><div class="cn">Amazon Private Label Specialist</div><div class="cd">Credential ID: EC-DT-1109</div><div class="cbadge"><div class="cdot"></div>COMPLETED</div></div>
+    <div class="certc no-arrow reveal" style="cursor:default"><div class="ci">Seller Systems · Brandon Young</div><div class="cn">DataDive Inner Circle — Advanced PPC &amp; Keyword Strategy</div><div class="cd">Seller Systems Programme</div><div class="cbadge"><div class="cdot"></div>COMPLETED</div></div>
+  </div>
+</section>
+
+<section style="background:var(--bg)">
+  <div class="se reveal"><div class="se-line"></div><span>Capabilities</span></div>
+  <h2 class="st reveal">WHAT I OWN<br>END-TO-END.</h2>
+  <div class="skg">
+    <div class="skc reveal"><div class="skh"><div class="ski">📊</div><div class="skt">AMAZON PPC</div></div><div class="skrows"><div class="skr"><div class="skm"><span class="skn">Sponsored Products</span><span class="skp">99%</span></div><div class="skt2"><div class="skf"></div></div></div><div class="skr"><div class="skm"><span class="skn">Sponsored Brands</span><span class="skp">95%</span></div><div class="skt2"><div class="skf"></div></div></div><div class="skr"><div class="skm"><span class="skn">Sponsored Display</span><span class="skp">90%</span></div><div class="skt2"><div class="skf"></div></div></div><div class="skr"><div class="skm"><span class="skn">Bulk Sheet Optimization</span><span class="skp">95%</span></div><div class="skt2"><div class="skf"></div></div></div></div></div>
+    <div class="skc reveal"><div class="skh"><div class="ski">📈</div><div class="skt">GROWTH OPS</div></div><div class="skrows"><div class="skr"><div class="skm"><span class="skn">P&amp;L Management</span><span class="skp">95%</span></div><div class="skt2"><div class="skf"></div></div></div><div class="skr"><div class="skm"><span class="skn">Listing SEO &amp; A/B Testing</span><span class="skp">92%</span></div><div class="skt2"><div class="skf"></div></div></div><div class="skr"><div class="skm"><span class="skn">Inventory Planning</span><span class="skp">88%</span></div><div class="skt2"><div class="skf"></div></div></div><div class="skr"><div class="skm"><span class="skn">Product Launch 0→Page 1</span><span class="skp">93%</span></div><div class="skt2"><div class="skf"></div></div></div></div></div>
+    <div class="skc reveal"><div class="skh"><div class="ski">🔧</div><div class="skt">TOOLS</div></div><div class="ttags"><span class="ttag">Helium 10</span><span class="ttag">DataDive</span><span class="ttag">Sellerboard</span><span class="ttag">JungleScout</span><span class="ttag">Brand Analytics</span><span class="ttag">SQPR</span><span class="ttag">Bulk Sheets</span><span class="ttag">Cerebro</span><span class="ttag">Pacvue</span><span class="ttag">Perpetua</span><span class="ttag">Keyword Tracker</span><span class="ttag">Google Sheets</span></div></div>
+    <div class="skc reveal"><div class="skh"><div class="ski">🧠</div><div class="skt">THE EDGE</div></div><p style="font-size:13px;color:var(--muted);line-height:1.85">BS Applied Psychology — University of the Punjab. I understand why customers click and why they don't. Most PPC managers chase ACoS. I chase profitable growth. The psychology background changes how I structure campaigns and interpret conversion data.</p></div>
+  </div>
+</section>
+
+<section style="background:var(--bg2)">
+  <div class="se reveal"><div class="se-line"></div><span>What Brands Say</span></div>
+  <h2 class="st reveal">RESULTS SPEAK.<br>SO DO CLIENTS.</h2>
+  <div class="tg">
+    <div class="tc reveal"><span class="tm">"</span><p class="tt">Faizan didn't just manage our PPC — he ran the entire brand. Revenue tripled in year one and he built systems that made everything scalable. The kind of operator you don't find every day.</p><div class="ta"><div class="tav">MF</div><div><div class="tan">Memory Foam Brand Owner</div><div class="tar">US · Amazon Private Label</div></div></div></div>
+    <div class="tc reveal"><span class="tm">"</span><p class="tt">Our ACoS was 60% when we brought Faizan in. Within 90 days it was 20% and sales had doubled. He restructured everything from scratch and built a reporting system we still use today.</p><div class="ta"><div class="tav">SB</div><div><div class="tan">Supplement Brand Founder</div><div class="tar">US · Health &amp; Wellness</div></div></div></div>
+    <div class="tc reveal"><span class="tm">"</span><p class="tt">$20K to $100K in a single Q4. Faizan's seasonal bid strategy during peak season was the difference. He treated our brand like it was his own money on the line.</p><div class="ta"><div class="tav">IS</div><div><div class="tan">Indoor Slippers Brand</div><div class="tar">US · Home Goods</div></div></div></div>
+    <div class="tc reveal"><span class="tm">"</span><p class="tt">Managed 10+ of our client brands simultaneously and never dropped the ball. Built the campaign frameworks our whole team now runs on. Operator-level thinking, not just a PPC hire.</p><div class="ta"><div class="tav">DF</div><div><div class="tan">DigiForce Agency</div><div class="tar">Amazon PPC Agency</div></div></div></div>
+  </div>
+</section>
+
+<div class="avail reveal">
+  <div class="avail-l">
+    <div class="avail-s"><div class="avail-d"></div><span class="avail-st">Available Now — May 2026</span></div>
+    <p class="avail-tx"><strong>Open to remote roles and brand partnerships.</strong> Senior PPC Lead · Brand Manager · Fractional Operator. Immediate start.</p>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <a href="https://calendly.com/faizan-ali2394/30min" target="_blank" class="btn btn-b">📅 Book a Call</a>
+    <a href="Faizan_Ali_CV.pdf" download class="btn btn-o">↓ Download CV</a>
+  </div>
+</div>
+
+<section id="contact" style="background:var(--bg)">
+  <div class="se reveal"><div class="se-line"></div><span>Get In Touch</span></div>
+  <h2 class="st reveal">READY TO<br>SCALE?</h2>
+  <div class="cog">
+    <div class="reveal">
+      <p class="ctit">Let's talk about your brand's growth.</p>
+      <p class="cbod">Agency hiring a senior operator. Brand owner looking to scale. Recruiter with the right role. I respond within 24 hours.</p>
+      <div class="cls">
+        <a href="mailto:faizan.ali2394@gmail.com" class="cl"><span class="cli">✉</span>faizan.ali2394@gmail.com<span class="cll">Email</span></a>
+        <a href="https://www.linkedin.com/in/faizanali-amazonppc" target="_blank" class="cl"><span class="cli">in</span>linkedin.com/in/faizanali-amazonppc<span class="cll">LinkedIn</span></a>
+        <a href="https://wa.me/923121495628" target="_blank" class="cl"><span class="cli">💬</span>+92 312 149 5628<span class="cll">WhatsApp</span></a>
+      </div>
+      <div class="cacts">
+        <a href="https://calendly.com/faizan-ali2394/30min" target="_blank" class="btn btn-b">📅 Book 30-min Call</a>
+        <a href="Faizan_Ali_CV.pdf" download class="btn btn-o">↓ Download CV</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <form class="cf" onsubmit="handleSubmit(event)">
+        <div class="fr">
+          <div class="fg"><label class="fl">Name</label><input type="text" class="fi" placeholder="John Smith" required></div>
+          <div class="fg"><label class="fl">Email</label><input type="email" class="fi" placeholder="john@brand.com" required></div>
+        </div>
+        <div class="fg"><label class="fl">I'm reaching out as a...</label><select class="fsel"><option value="">Select one</option><option>Brand Owner looking to hire</option><option>Agency recruiter</option><option>In-house recruiter</option><option>Potential partner</option></select></div>
+        <div class="fg"><label class="fl">Monthly Amazon Revenue</label><select class="fsel"><option value="">Select range</option><option>Under $30K/month</option><option>$30K–$100K/month</option><option>$100K–$300K/month</option><option>$300K+/month</option><option>N/A — Recruiter</option></select></div>
+        <div class="fg"><label class="fl">Message</label><textarea class="fa" placeholder="Tell me about the role or brand. What's the challenge?" required></textarea></div>
+        <button type="submit" class="fsub">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="fcopy">© 2026 FAIZAN ALI · AMAZON GROWTH OPERATOR · LAHORE, PK</span>
+  <div class="flinks">
+    <a href="mailto:faizan.ali2394@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/faizanali-amazonppc" target="_blank">LinkedIn</a>
+    <a href="https://wa.me/923121495628" target="_blank">WhatsApp</a>
+    <a href="https://calendly.com/faizan-ali2394/30min" target="_blank">Calendly</a>
+  </div>
+</footer>
+
+<script>
+const els=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver((e)=>{e.forEach((el,i)=>{if(el.isIntersecting){setTimeout(()=>el.target.classList.add('on'),i*70);io.unobserve(el.target)}})},{threshold:.08});
+els.forEach(el=>io.observe(el));
+const fills=document.querySelectorAll('.skf');
+const sio=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('anim');sio.unobserve(el.target)}})},{threshold:.3});
+fills.forEach(f=>sio.observe(f));
+function handleSubmit(e){e.preventDefault();const b=e.target.querySelector('.fsub');b.textContent="✓ Sent — I'll respond within 24hrs";b.style.background='var(--accent)';setTimeout(()=>{b.textContent='Send Message →';b.style.background='';e.target.reset()},4000)}
+const navAs=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{let c='';document.querySelectorAll('section[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-120)c=s.id});navAs.forEach(a=>{a.style.color=a.getAttribute('href')==='#'+c?'var(--accent)':''})},{passive:true});
+</script>
+</body>
+</html>
